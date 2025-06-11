@@ -1,0 +1,62 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+# : Manager {{{
+
+[mgr]
+cwd = { fg = "#e0def4" }
+
+# Hovered
+hovered         = { reversed = true }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#f6c177", bold = true, italic = true, underline = true }
+find_position = { fg = "#f6c177", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#9ccfd8", bg = "#9ccfd8" }
+marker_cut      = { fg = "#eb6f92", bg = "#eb6f92" }
+marker_marked   = { fg = "#31748f", bg = "#31748f" }
+marker_selected = { fg = "#ebbcba", bg = "#ebbcba" }
+
+# Tab
+tab_active   = { reversed = true }
+tab_inactive = {}
+tab_width    = 1
+
+# Count
+count_copied   = { fg = "#191724", bg = "#9ccfd8" }
+count_cut      = { fg = "#191724", bg = "#eb6f92" }
+count_selected = { fg = "#191724", bg = "#ebbcba" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#908caa" }
+
+# : }}}
+
+# : Tabs {{{
+
+[tabs]
+active   = { fg = "#191724", bg = "#ebbcba", bold = true }
+inactive = { fg = "#ebbcba", bg = "#26233a" }
+
+# : }}}
+
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#191724", bg = "#89b4fa", bold = true }
+normal_alt  = { fg = "#89b4fa", bg = "#13244" }
+
+# Select mode
+select_main = { fg = "#191724", bg = "#94e2d5", bold = true }
+select_alt  = { fg = "#94e2d5", bg = "#313244" }
+
+# Unset mode
+unset_main = { fg = "#191724", bg = "#f2cdcd", bold = true }
+unset_alt  = { fg = "#f2cdcd", bg = "#313244" }
+
+# : }}}
+

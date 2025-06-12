@@ -1,10 +1,9 @@
-<div align="center">
-  <img src="https://github.com/sxyazi/yazi/blob/main/assets/logo.png?raw=true" alt="Yazi logo" width="20%">
-</div>
+<p align="center">
+    <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
+    <h2 align="center">Rosé Pine for Neovim</h2>
+</p>
 
-<h3 align="center">
-	Example Flavor for <a href="https://github.com/sxyazi/yazi">Yazi</a>
-</h3>
+<p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
 
 ## Cooking up a new flavor
 

@@ -1,22 +1,9 @@
 <p align="center">
     <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
-    <h2 align="center">Rosé Pine for Neovim</h2>
+    <h2 align="center">Rosé Pine for Yazi File Manager</h2>
 </p>
 
 <p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
-
-## Cooking up a new flavor
-
-> [!NOTE]
-> Please remove this section from your README before publishing.
-
-1. [x] Use this template and rename it to `your-flavor-name.yazi`.
-2. [ ] Copy the **parts you need to customize** from the default [theme-dark.toml][theme-dark] or [theme-light.toml][theme-light] as `./flavor.toml`, and change them to meet your preferences.
-3. [ ] Find a `.tmTheme` file on GitHub that matches the color of your flavor, copy it and its license file as `./tmtheme.xml`, and `LICENSE-tmtheme`.
-4. [ ] Modify the content and preview image in the README to fit your flavor.
-
-[theme-dark]: https://github.com/sxyazi/yazi/blob/main/yazi-config/preset/theme-dark.toml
-[theme-light]: https://github.com/sxyazi/yazi/blob/main/yazi-config/preset/theme-light.toml
 
 ## 👀 Preview
 
@@ -25,9 +12,32 @@
 ## 🎨 Installation
 
 <!-- Please replace "username/example" with your repository name. -->
-
+On Archlinux, Gentoo, or any other imperative distro.
 ```sh
-ya pkg add username/example
+ya pkg add rachitve6h2g/rose-pine
+```
+
+On NixOS Home-Manager.
+
+```nix
+{ pkgs, ... }: {
+    programs.yazi = {
+        flavors = {
+            rose-pine = ( pkgs.fetchFromGithub {
+                owner = "rachitve6h2g";
+                repo = "rose-pine.yazi";
+                rev = "3db994e71b0f42dd1f713a544c917145560ce5bb";
+                hash = "sha256-hWFlVcpUEOoeBqkWw7Lmd6vlegW+vJvQrz54xvAkxc8=";
+            });
+        };
+
+        theme = {
+            flavor = {
+                dark = "rose-pine";
+            };
+        };
+    };
+}
 ```
 
 ## ⚙️ Usage
@@ -42,7 +52,7 @@ To set it as your dark flavor, change the content of your `theme.toml` to:
 
 ```toml
 [flavor]
-dark = "example"
+dark = "rose-pine"
 ```
 
 Make sure your `theme.toml` doesn't contain anything other than `[flavor]`, unless you want to override certain styles of this flavor.
@@ -54,3 +64,8 @@ See the [Yazi flavor documentation](https://yazi-rs.github.io/docs/flavors/overv
 The flavor is MIT-licensed, and the included tmTheme is also MIT-licensed.
 
 Check the [LICENSE](LICENSE) and [LICENSE-tmtheme](LICENSE-tmtheme) file for more details.
+
+
+### TODO: 
+- [ ] Add rose-pine icons using [icons-brew.yazi](https://github.com/lpnh/icons-brew.yazi).
+- [ ] Add light theme variant.

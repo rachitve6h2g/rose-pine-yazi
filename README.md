@@ -14,3 +14,6 @@
 **Rosé Pine Moon**
 <img src="rose-pine-moon.yazi/preview.png" width="600" />
 
+
+### TODO
+- [ ] Add spot theme design as well. [See](https://github.com/sxyazi/yazi/pull/2391).

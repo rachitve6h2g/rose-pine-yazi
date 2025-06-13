@@ -178,7 +178,7 @@ rules = [
 
 # : }}}
 
-# {{{
+# : ICON THEME {{{
 [icon]
 
 files = [
@@ -830,4 +830,14 @@ exts = [
 	{ name = "zst", text = "", fg = "#f6c177" },
 	{ name = "🔥", text = "", fg = "#eb6f92" },
 ]
+# }}}
+# {{{ : SPOTTER
+
+[spot]
+border = { fg = "#f6c177" }
+title = { fg = "#ea9a97"}
+
+[table]
+tbl_col = { fg = "#3e8fb0" }
+
 # }}}

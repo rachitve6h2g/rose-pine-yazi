@@ -14,7 +14,7 @@
 <!-- Please replace "username/example" with your repository name. -->
 On Archlinux, Gentoo, or any other imperative distro.
 ```sh
-ya pkg add rachitve6h2g/rose-pine
+ya pkg add rachitve6h2g/rose-pine-yazi:rose-pine-main
 ```
 
 On NixOS Home-Manager.
@@ -23,11 +23,19 @@ On NixOS Home-Manager.
 { pkgs, ... }: {
     programs.yazi = {
         flavors = {
-            rose-pine = ( pkgs.fetchFromGithub {
-                owner = "rachitve6h2g";
-                repo = "rose-pine.yazi";
-                rev = "3db994e71b0f42dd1f713a544c917145560ce5bb";
-                hash = "sha256-hWFlVcpUEOoeBqkWw7Lmd6vlegW+vJvQrz54xvAkxc8=";
+            rose-pine = ( 
+                pkgs.stdenv.mkDerivation {
+                name = "rose-pine-yazi";
+                src = pkgs.fetchFromGitHub {
+                  owner = "rachitve6h2g";
+                  repo = "rose-pine-yazi";
+                  rev = "860081ad782f9740212d4cbf1a0493a8afc55d13";
+                  hash = "sha256-kmE/cZAXhqlAlGUsvTZAe1mAaKncBAKbYiEV2zc4JME=";
+                };
+                installPhase = ''
+                  mkdir $out
+                  cp -r $src/rose-pine-main.yazi/* $out/
+                '';
             });
         };
 
@@ -64,8 +72,3 @@ See the [Yazi flavor documentation](https://yazi-rs.github.io/docs/flavors/overv
 The flavor is MIT-licensed, and the included tmTheme is also MIT-licensed.
 
 Check the [LICENSE](LICENSE) and [LICENSE-tmtheme](LICENSE-tmtheme) file for more details.
-
-
-### TODO: 
-- [X] Add rose-pine icons using [icons-brew.yazi](https://github.com/lpnh/icons-brew.yazi).
-- [ ] Add light theme variant.

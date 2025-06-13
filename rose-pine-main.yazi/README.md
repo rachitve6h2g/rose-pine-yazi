@@ -67,5 +67,5 @@ Check the [LICENSE](LICENSE) and [LICENSE-tmtheme](LICENSE-tmtheme) file for mor
 
 
 ### TODO: 
-- [ ] Add rose-pine icons using [icons-brew.yazi](https://github.com/lpnh/icons-brew.yazi).
+- [X] Add rose-pine icons using [icons-brew.yazi](https://github.com/lpnh/icons-brew.yazi).
 - [ ] Add light theme variant.
